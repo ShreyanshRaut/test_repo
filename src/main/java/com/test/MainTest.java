@@ -85,12 +85,12 @@ public class MainTest {
         ));
 
         // Validate the prices of the books
-        response.then().body("price", containsInAnyOrder(15.41F, 9.69F, 20.00F)); // Adjusted for additional entries
+        response.then().body("price", containsInAnyOrder(15.41f, 9.69f, 20.0f)); // Adjusted for additional entries
 
         // Optionally, validate the first book's details
         response.then().body("[0].name", equalTo("A Guide to the Bodhisattva Way of Life"))
                 .body("[0].author", equalTo("Santideva"))
-                .body("[0].price", equalTo(15.41F)); // Use 15.41F for Float
+                .body("[0].price", equalTo(15.41f)); // Use 15.41F for Float
     }
 
     // Part 2
